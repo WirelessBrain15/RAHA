@@ -1,0 +1,98 @@
+<html>
+    <head>
+        <title>Webcam test</title>
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            #container
+            {
+                position: fixed;
+                display: grid;
+                /* grid-template-columns: 1fr; */
+                /* overflow: hidden; */
+                top: 100px;
+                left: 25%;
+                width: 50%;
+                height: 50%;
+                /* object-fit: cover; */
+                /* border: 10px #333 solid; */
+            } 
+            #videoElement 
+            {
+                width: 500px;
+                height: 375px;
+                background-color: #666;
+            }
+            #container2
+            {
+                position: fixed;
+                top: 100px;
+                left: 55%;
+                width: 500px;
+                height: 375px;
+                /* border: 10px #333 solid; */
+            } 
+            #videoElement2 
+            {
+                width: 500px;
+                height: 375px;
+                background-color: #666;
+            }
+            /* #audioContainer
+            {
+                margin: 0px auto;
+                width: 500px;
+                height: 10px;
+                border: 10px #300 solid;
+            }    */
+            #audioElement
+            {
+                margin: 0px auto;
+                width: 500px;
+                height: 10px;
+                border: 10px #300 solid;
+            }   
+        </style>
+    </head>
+    <body>
+        <h1> Webcam test </h1>
+        <div id="container">
+            <video autoplay="true" id="videoElement">
+            <audio autoplay="true" id="audioElement">
+            <!-- <div id="dv"></div> -->
+	
+            </video>        
+        </div>
+        <div id="container2">
+            <video autoplay="true" id="videoElement2"></video>
+        </div>
+
+          <!-- <iframe src="https://iframe.dacast.com/live/c69ee3db-1545-6847-e6fb-6919c5fd42f7/176f48ab-dd37-18c7-f354-8d728dfd43c9">
+
+  </iframe> -->
+
+  <!-- <script id="c69ee3db-1545-6847-e6fb-6919c5fd42f7-live-176f48ab-dd37-18c7-f354-8d728dfd43c9" width="100%" height="100%" src="https://player.dacast.com/js/player.js?contentId=c69ee3db-1545-6847-e6fb-6919c5fd42f7-live-176f48ab-dd37-18c7-f354-8d728dfd43c9" class="dacast-video"></script>
+   -->
+
+        <!-- <label>Select Video Source (Camera)</label>
+
+        <select id="video-source"></select>
+
+        <label>Select Audio Source (Microphone)</label>
+
+        <select id="audio-source"></select>
+ -->
+
+        <button id="start-el" onclick="startStream()">START STREAM</button>
+        <button id="switch-el" onclick="switchCam()">SWITCH</button>
+        <button id="count-el">count</button>
+        <script src="webcam.js">
+        </script>
+        <!-- <script src="mic.js">
+        </script> -->
+        
+    </body>
+</html>
